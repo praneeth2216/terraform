@@ -39,14 +39,4 @@ resource "aws_instance" "shell" {
   }
 }
 
-resource "aws_s3_bucket" "my_bucket" {
-  bucket = "karupothula2" 
-  acl    = "private"                      
-  versioning {
-    enable = true
-  }
-  tags = {
-    Name        = "MyBucket"
-    Environment = "Dev"
-  }
-}
+
