@@ -43,10 +43,7 @@ pipeline {
             }
         }
 
-        stage('Terraform Apply') {
-            when {
-                expression { return params.APPLY == true }
-            }
+        stage('Terraform Apply') {            
             steps {
                 echo "Applying Terraform changes..."
                 sh 'terraform apply -auto-approve tfplan'
