@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+    parameters {
+    booleanParam(name: 'APPLY', defaultValue: false, description: 'Set true to actually run terraform apply')
+    }
     environment {
         TF_VAR_region = "us-east-2"   // optional, if you want to pass vars
     }
