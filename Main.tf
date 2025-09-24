@@ -37,6 +37,6 @@ resource "aws_instance" "shell" {
   key_name = "terraform"
   tags = {
     Name = "shell"
-    Environment = "qat"
+    Environment = "dev"
   }
 }
