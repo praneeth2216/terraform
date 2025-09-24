@@ -27,6 +27,7 @@ resource "aws_instance" "powershell" {
 
   tags = {
     Name = "powershell"
+    Environment = "dev"
   }
 }
 
@@ -36,7 +37,6 @@ resource "aws_instance" "shell" {
   key_name = "terraform"
   tags = {
     Name = "shell"
+    Environment = "dev"
   }
 }
-
-
